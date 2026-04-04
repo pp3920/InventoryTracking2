@@ -22,7 +22,7 @@ export class DigitalProduct  extends Product {
     }
 
     displayDetails(): string {
-        return '${super.displayDetails()} and weight ${this.getfileSize()}';
+        return '${super.displayDetails()} and the filesize  ${this.getfileSize()}';
     }
     
 

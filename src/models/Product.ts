@@ -9,9 +9,12 @@
         this.price = price;
     }
 
+    getPrice():number{
+        return this.price;
+    }
+
     getPriceWithTax(): number{
-     let totalPrice:any = this.price;
-     return totalPrice;
+        return this.price;
     }
 
     displayDetails(): string {

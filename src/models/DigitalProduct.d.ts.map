@@ -1,0 +1,1 @@
+{"version":3,"file":"DigitalProduct.d.ts","sourceRoot":"","sources":["DigitalProduct.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,cAAc,CAAC;AAEvC,qBAAa,cAAgB,SAAQ,OAAO;IACxC,QAAQ,EAAC,MAAM,CAAC;gBAEJ,QAAQ,EAAC,MAAM,EAAE,GAAG,EAAC,MAAM,EAAE,IAAI,EAAC,MAAM,EAAE,KAAK,EAAC,MAAM;IAOhE,eAAe,IAAI,MAAM;IAM3B,WAAW,IAAG,MAAM;CAOvB"}
