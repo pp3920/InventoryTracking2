@@ -1,1 +1,0 @@
-{"version":3,"file":"PhysicalProduct.d.ts","sourceRoot":"","sources":["PhysicalProduct.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,cAAc,CAAC;AAEtC,qBAAa,eAAiB,SAAQ,OAAO;IAC1C,MAAM,EAAC,MAAM,CAAC;gBAEF,MAAM,EAAC,MAAM,EAAE,GAAG,EAAC,MAAM,EAAE,IAAI,EAAC,MAAM,EAAE,KAAK,EAAC,MAAM;IAOhE,eAAe,IAAI,MAAM;IAMzB,SAAS,IAAG,MAAM;CAKrB"}
