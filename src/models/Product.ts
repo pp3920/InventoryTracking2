@@ -1,7 +1,12 @@
- export class Product {
-    sku: string;
-    name: string;
-    price: number;
+import { calculateProductTax } from "../utils/taxCalculator.js";
+
+
+
+export class Product {
+    private sku: string;
+    private name: string;
+    private price: number;
+    protected taxPercentage: number = 10;   //with tax
 
     constructor(sku: string, name: string, price: number) {
         this.sku = sku;
@@ -9,17 +14,18 @@
         this.price = price;
     }
 
-    getPrice():number{
+    public getPrice(): number {
         return this.price;
     }
 
-    getPriceWithTax(): number{
-        return this.price;
+    public getPriceWithTax(): number {
+        let x = calculateProductTax(this, this.taxPercentage);
+        return x;
     }
 
-    displayDetails(): string {
-        return '${this.name} costs $${this.price} and is {this.sku}';
+    public displayDetails(): string {
+        return `${this.name} costs $${this.price} and is its sku is  ${this.sku}`
     }
 
-    
+
 }

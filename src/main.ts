@@ -1,22 +1,17 @@
-import { DigitalProduct } from './models/DigitalProduct.js';
-import { PhysicalProduct } from './models/PhysicalProduct.js';
-import { Product } from './models/Product.js';
+import { DigitalProduct } from "./models/DigitalProduct.js";
+import { PhysicalProduct } from "./models/PhysicalProduct.js";
+import { Product } from "./models/Product.js";
 
-let list:Product[] = [];
-const pp = new PhysicalProduct(25.5, "example-sku", "Example Product", 0);
-const dp = new DigitalProduct(100, "digital-sku", "Digital Product", 10);
+let prodList: Product[] = [];
 
-list.push(pp);
-list.push(dp);
+const physicalProd = new PhysicalProduct("pd1", "Laptop", 1000, 2); //sku name price
+const digitalProd = new DigitalProduct("pd2", "E-book", 20, 100);
 
-console.log(list);
+prodList.push(physicalProd);
+prodList.push(digitalProd);
 
-list.forEach((product)=>{
-    console.log(product.displayDetails());
-    console.log(`Price with tax: ${product.getPriceWithTax()} \n`);
+
+prodList.forEach((product) => {
+   console.log(product.displayDetails());
+    console.log(`Price with tax: ${product.getPriceWithTax()}\n`);
 });
-
-
-
-
-

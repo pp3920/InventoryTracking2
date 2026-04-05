@@ -1,27 +1,27 @@
-import { Product } from './Product.js';
+import { calculateProductTax } from "../utils/taxCalculator.js";
+import { Product } from "./Product.js";
 
- export class PhysicalProduct  extends Product {
-    weight:number;
+export class PhysicalProduct extends Product {
+    private weight: number;
 
-    constructor(weight:number, sku:string, name:string, price:number)
-    {  
+    constructor(sku: string, name: string, price: number, weight: number) {
         super(sku, name, price);
         this.weight = weight;
-    }
-     
-
-    getPriceWithTax(): number {
-        const taxRate = 0.1; // default tax rate
-        const totalPrice = this.price * (1 + taxRate);
-        return totalPrice;
-    }
-
-    getWeight():string{
-         return '$weight is {this.weight}';
 
     }
 
-    displayDetails(): string {
-        return '${super.displayDetails()} and weight ${this.getWeight}';
+    public getPriceWithTax(): number {
+        let x = calculateProductTax(this, this.taxPercentage) ;
+       return x;
+    }
+
+
+    // return the formatted weight
+    public getWeight(): string {
+        return `${this.weight.toFixed(1)} kg`;
+    }
+
+    public displayDetails(): string {
+        return `${super.displayDetails()} and weight ${this.getWeight()}`;
     }
 }

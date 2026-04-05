@@ -1,29 +1,26 @@
-import { Product } from './Product.js';
+import { Product } from "./Product.js";
 
-export class DigitalProduct  extends Product {
-    fileSize:number;
 
-    constructor(fileSize:number, sku:string, name:string, price:number)
-    {  
+export class DigitalProduct extends Product {
+    private fileSize: number;
+
+
+    constructor(sku: string, name: string, price: number, fileSize: number) {
         super(sku, name, price);
         this.fileSize = fileSize;
     }
-     
+    //no tax for digital products
 
-      getPriceWithTax(): number {
-        const taxRate = 0.0; // default tax rate
-        const totalPrice = this.price * (1 + taxRate);
-        return totalPrice;
+    public getPriceWithTax(): number {
+        return this.getPrice();
     }
 
-    getfileSize():string{
-         return '${this.fileSize}';
 
+    public getFileSize(): string {
+        return `${this.fileSize} MB`;
     }
 
     displayDetails(): string {
-        return '${super.displayDetails()} and the filesize  ${this.getfileSize()}';
+        return `${super.displayDetails()} and weight ${this.getFileSize()}`;
     }
-    
-
 }
